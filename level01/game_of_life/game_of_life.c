@@ -5,7 +5,6 @@
 int main(int ac, char **av) {
 	if (ac != 4)
 		return (putchar('e'), 1);
-
 	int width = atoi(av[1]);
 	int height = atoi(av[2]);
 	int iterations = atoi(av[3]);
@@ -17,7 +16,6 @@ int main(int ac, char **av) {
 			}
 		}
 	}
-
 	int x = 1, y = 1, pen = 0;
 	char cmd;
 	while (read(0, &cmd, 1) > 0) {
@@ -60,7 +58,7 @@ int main(int ac, char **av) {
 	}
 	for (int h = 1; h < height + 1; h++) {
 		for (int w = 1; w < width + 1; w++) {
-			putchar(arr[iterations % 2][w][h] ? '0' : ' ');
+			putchar(arr[iterations % 2][w][h] ? '0' : ' '); // check if subject require 0 (number zero) or O (uppercase o)
 		}
 		putchar('\n');
 	}
